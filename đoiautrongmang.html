@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="thaythe" placeholder="Nhập mảng">
+    <button onclick="Nhap()">Nhập</button>
+    <button onclick="Thaydoi()">Thay đổi</button>
+    <div id="result">Hiện kết quả</div>
+    <div id="result1">Hiện kết quả</div>
+    <script>
+        let x = 0;
+        let arr = Array();
+        function Nhap(){
+            arr[x] = document.getElementById("thaythe").value;
+            x++;            
+            for( let i = 0; i<= arr.length; i++){
+            let e;     
+            e+= arr[i];   
+            }
+            document.getElementById("result").innerHTML= arr.join();
+        }
+            function Thaydoi(){
+                document.getElementById("result1").innerHTML= log(arr.replace('-','_'));
+            }
+    </script>
+</body>
+</html>
